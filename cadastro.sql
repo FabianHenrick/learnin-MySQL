@@ -23,6 +23,11 @@ values('Fabian', '1998-03-26' , 'M' , '90.50', '1.76', 'Brasil' );
 
   /*Forma abreviada para inserir valores, quando seguem a mesma ordem declarada na tabela*/
 Insert into pessoas values('Fabian', '1998-03-26' , 'M' , '90.50', '1.76', 'Brasil' );
- 
+
+Insert into pessoas (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+values(Default,'Fabian', '1998-03-26' , 'M' , '90.50', '1.76', 'Brasil'),
+(Default,'Sayuri', '1999-02-18' , 'F' , '50.2', '1.54', 'Japão' ),
+(Default,'Gebiscreidison', '1988-07-21' , 'M' , '103.50', '1.790', 'EUA');	
+/*adcionando a virgula e seguindo o mesmo padrão mas preenchendo dados diferentes, é possivel adcionar vários cadastros em um único insert, apenas lembrando de adcionar o ";" no ultimo cadastro para demonstrar o fim do comando */
 
 select * from pessoas;
