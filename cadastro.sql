@@ -34,17 +34,25 @@ select * from pessoas;
 
  /*Alteração de tabelas usando Alter table'*/
 alter table pessoas
-add collum profissao varchar(10);
+add column profissao varchar(10);
  /*Add collum para adcionar um campo'*/
  
 alter table pessoas
-drop collum profissao;
+drop column profissao;
 /*drop collum para remover um campo'*/
 
 alter table pessoas
-add collum profissao varchar(10) after nome;
+add column profissao varchar(10) after nome;
 /*add collum... after para adcionar um campo em uma posição espevífica após o nome do campo mencionado.'*/
 
 alter table pessoas
-add collum codigo int first ;
+add column codigo int first ;
 /*add collum... first para adcionar um campo na primeira posição da tabela.'*/
+
+alter table pessoas
+modify column profissao varchar(20) not null default '';
+/*Modify para modificar o tipo primitivo e suas constraints'*/
+
+alter table pessoas
+change column profissao prof varchar(20);
+/*change para modificar o nome de um campo seu tipo primitivo e suas constraints'*/
