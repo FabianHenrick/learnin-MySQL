@@ -31,3 +31,20 @@ values(Default,'Fabian', '1998-03-26' , 'M' , '90.50', '1.76', 'Brasil'),
 /*adcionando a virgula e seguindo o mesmo padrão mas preenchendo dados diferentes, é possivel adcionar vários cadastros em um único insert, apenas lembrando de adcionar o ";" no ultimo cadastro para demonstrar o fim do comando */
 
 select * from pessoas;
+
+ /*Alteração de tabelas usando Alter table'*/
+alter table pessoas
+add collum profissao varchar(10);
+ /*Add collum para adcionar um campo'*/
+ 
+alter table pessoas
+drop collum profissao;
+/*drop collum para remover um campo'*/
+
+alter table pessoas
+add collum profissao varchar(10) after nome;
+/*add collum... after para adcionar um campo em uma posição espevífica após o nome do campo mencionado.'*/
+
+alter table pessoas
+add collum codigo int first ;
+/*add collum... first para adcionar um campo na primeira posição da tabela.'*/
