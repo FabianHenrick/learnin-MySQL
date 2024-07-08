@@ -1,3 +1,13 @@
+/* ##### DDL #####
+   Data Definition Language
+   comando de definição de dados, como create database, create table, alter table, drop table.
+ */
+ 
+  /* ##### DML #####
+   Data Manipulation Language
+   comando de manipulação de dados, como insert into
+ */
+
 Create database cadastro
 default character set utf8
 default collate utf8_general_ci;
@@ -56,3 +66,33 @@ modify column profissao varchar(20) not null default '';
 alter table pessoas
 change column profissao prof varchar(20);
 /*change para modificar o nome de um campo seu tipo primitivo e suas constraints'*/
+
+alter table pessoas
+rename to sereshumaninhos;
+/*rename to para modificar o nome de uma tabela'*/
+
+####################### Criando nova tabela #######################
+
+create table if not exists cursos(
+nome varchar(30) not null UNIQUE,
+descricao text,
+carga int UNSIGNED,
+totaulas int UNSIGNED,
+ano year default '2016'
+)default charset = utf8mb4;
+
+/*if not exists serve para criar a tabela somente caso não exista uma tabela com o mesmo nome*/
+
+/* UNIQUE serve para não permitir registrar valores iguais sem necessidade de definir como uma primary key*/
+
+/* UNSIGNED serve para registar somente valores positivos*/
+
+alter table cursos
+add column idcurso int first;
+
+alter table cursos
+add primary key (idcurso);
+/* add primary key vai adcionar ao campo idcurso uma primary key*/
+
+drop table tabelaparaexcluir;
+/* drop table apaga completamente a tabela */
