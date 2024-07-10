@@ -1,11 +1,12 @@
-/* ##### DDL #####
+
+ /* ##### DDL #####
    Data Definition Language
-   comando de definição de dados, como create database, create table, alter table, drop table.
+   comando de definição de dados, como CREATE DATABASE, CREATE TABLE, ALTER TABLE, DROP TABLE.
  */
  
   /* ##### DML #####
    Data Manipulation Language
-   comando de manipulação de dados, como insert into
+   comando de manipulação de dados, como INSERT INTO, UPDATE, DELETE, TRUNCATE
  */
 
 Create database cadastro
@@ -94,5 +95,30 @@ alter table cursos
 add primary key (idcurso);
 /* add primary key vai adcionar ao campo idcurso uma primary key*/
 
-drop table tabelaparaexcluir;
+drop table if exists tabelaparaexcluir;
 /* drop table apaga completamente a tabela */
+
+UPDATE cursos
+set nome = 'HTML5' 
+where idcurso = '1';
+/* UPDATE serve para atualizar uma informação , o SET vai definir o campo nome para "HTML5
+e o WHERE é o que da a localização do campo que vai ser modificado"
+obs: colocando apenas a , após o campo alterado é possivel alterar mais de um campo ao mesmo tempo
+ */
+ 
+update cursos
+set carga = '40'
+where ano = '2015'
+limit 1;
+/*  colocando apenas a , após o campo alterado é possivel alterar mais de um campo ao mesmo tempo
+é possivel adcionar o LIMIT no fim do comando para limitar quantas linhas vão ser alterados ao mesmo tempo
+ */
+ 
+ delete from cursos
+ where nome = 'World'
+ limit 2;
+ /* serve para deletar registros e também é possivel adcionar o LIMIT no fim do comando para limitar quantas linhas vão ser alterados ao mesmo tempo
+ */
+ 
+ truncate table tabelaParaLimpar;
+ /* serve para deletar TODOS registros da tabela*/
