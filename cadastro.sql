@@ -9,6 +9,8 @@
    comando de manipulação de dados, como INSERT INTO, UPDATE, DELETE, TRUNCATE
  */
 
+ /* OBS: Não existe Ctrl+Z portanto jamais trabalhe diretamente com o banco de dados da aplicação, e sempre tenha um backup*/
+
 Create database cadastro
 default character set utf8
 default collate utf8_general_ci;
