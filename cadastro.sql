@@ -124,3 +124,12 @@ limit 1;
  
  truncate table tabelaParaLimpar;
  /* serve para deletar TODOS registros da tabela*/
+/*
+
+O PHPMyAdmin é uma ferramenta gratuita e de código aberto que facilita a administração de bancos de dados MySQL e MariaDB através de uma interface web.
+Ele permite que usuários gerenciem suas bases de dados de maneira visual, sem a necessidade de utilizar comandos SQL diretamente no terminal.
+O PHPMyAdmin é frequentemente utilizado por desenvolvedores web, administradores de sistemas e qualquer pessoa que precise gerenciar bancos de dados MySQL ou MariaDB.
+É particularmente popular em ambientes de desenvolvimento local, como parte de pacotes de servidores web (por exemplo, XAMPP, MAMP, WAMP) que incluem Apache, MySQL e PHP.
+
+Em resumo, o PHPMyAdmin é uma ferramenta poderosa e versátil que simplifica a administração de bancos de dados através de uma interface web amigável.
+*/
