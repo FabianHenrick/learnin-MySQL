@@ -133,3 +133,16 @@ O PHPMyAdmin é frequentemente utilizado por desenvolvedores web, administradore
 
 Em resumo, o PHPMyAdmin é uma ferramenta poderosa e versátil que simplifica a administração de bancos de dados através de uma interface web amigável.
 */
+
+select * from cursos
+order by nome desc;
+
+ /* ao usar o comando select é possivel usar como parametro o "order by" e o nome de uma coluna para exibir em ordem alfabética ou númerica
+Obs: o desc serve para inverter a ordem.
+*/
+
+select nome, carga, ano from cursos
+order by nome ;
+
+ /* É possivel colocar apenas os nomes das colunas que deseja para receber apenas elas como resultados*/
+
