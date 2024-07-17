@@ -9,6 +9,12 @@
    comando de manipulação de dados, como INSERT INTO, UPDATE, DELETE, TRUNCATE
  */
 
+   /* ##### DQL #####
+   Data Query Language
+   comando de seleção de dados, como SELECT
+ */
+
+
  /* OBS: Não existe Ctrl+Z portanto jamais trabalhe diretamente com o banco de dados da aplicação, e sempre tenha um backup*/
 
 Create database cadastro
