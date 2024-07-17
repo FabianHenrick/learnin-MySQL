@@ -157,4 +157,12 @@ where ano <= 2016
 order by nome ;
  /* É possivel usar a mesma sintaxe de algoritimos para passar comandos, como por exemplo o " where ano <= 2016"  vai filtrar e exibir todos os que possuam o valor de ano menor ou igual ao 2016*/
 
+select * from cursos
+where ano  between 2014 and 2017;
 
+/* O camando "between" pode ser usado como parametro para filtrar e exibir dados entre os valores determinados.*/
+
+select * from cursos
+where ano  in ('2014', '2017', 2018');
+
+ /* O camando "in" pode ser usado como parametro para filtrar e exibir dados que apresentam valores pesceficos.*/
