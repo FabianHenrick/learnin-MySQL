@@ -146,3 +146,15 @@ order by nome ;
 
  /* É possivel colocar apenas os nomes das colunas que deseja para receber apenas elas como resultados*/
 
+select nome, carga, ano from cursos
+where ano = '2016'
+order by nome ;
+
+ /* É possivel usar o comando Where como uma condição para mostrar apenas as linhas com o filtro '2016' por exemplo*/
+
+select nome, carga, ano from cursos
+where ano <= 2016
+order by nome ;
+ /* É possivel usar a mesma sintaxe de algoritimos para passar comandos, como por exemplo o " where ano <= 2016"  vai filtrar e exibir todos os que possuam o valor de ano menor ou igual ao 2016*/
+
+
