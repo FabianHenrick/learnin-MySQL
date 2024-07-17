@@ -163,6 +163,17 @@ where ano  between 2014 and 2017;
 /* O camando "between" pode ser usado como parametro para filtrar e exibir dados entre os valores determinados.*/
 
 select * from cursos
-where ano  in ('2014', '2017', 2018');
+where ano  in ('2014', '2017', '2018');
 
- /* O camando "in" pode ser usado como parametro para filtrar e exibir dados que apresentam valores pesceficos.*/
+/* O camando "in" pode ser usado como parametro para filtrar e exibir dados que apresentam valores pesceficos*/
+
+select * from cursos
+where carga >35 and totaulas < 30;
+
+ /* É possivel fazer expressões condicionais mais complexas pra ter filtragens mais elaboradas*/
+
+select * from cursos
+where carga >35 or totaulas < 30;
+
+ /* Ao usar o "or" no lugar de and, a filtragem vai exibir resultados contanto que um campo tenha resultado verdadeiro para sua condição*/
+
