@@ -188,4 +188,6 @@ select * from cursos
 where nome like 'P%'; 
 /* usando como operador o 'Like'(Se pareça) e passando como filtro 'a%'  onde o '%' sgnifica qualquer coisa mais o dado de parametro,
  se a % for colocada no inicio ('%a') vai retornar tudo que terminar com a letra a,
- enquanto ('a%') vai retornar tudo que começar com a letra a */
+ enquanto ('a%') vai retornar tudo que começar com a letra a.
+OBS: ao colocar o "Not" antes do like ele passa a se tornar operador de negação.
+ */
