@@ -207,7 +207,35 @@ SELECT * FROM produtos WHERE nome LIKE 'maç_';
 /*Este comando seleciona todos os produtos cujo nome é "maç" seguido por exatamente um caractere, como "maçã" ou "maço".
 Wildcards são bastante úteis para realizar buscas flexíveis e encontrar registros que correspondam a padrões específicos.
  */
+select distinct nacionalidade from gafanhotos
+order by nacionalidade ;
 
+/*O comando "Distinct" no MySQL é usada para remover duplicatas de um conjunto de resultados. Quando você utiliza SELECT DISTINCT, apenas os valores únicos serão retornados na consulta,
+eliminando quaisquer linhas duplicadas. Isso é particularmente útil quando você precisa garantir que os dados retornados não contenham repetições.. 
+no exemplo citado ele vai apresentar apenas um exemplo de cada nacionalidade presente na tabela gafanhotos, evitando repetições.
+ */
+
+select count(*) from cursos
+ where carga >40;
+
+/* o "count" é uma função de agregação, ela vai agrupar e contar os registros retornando quantos registro temos que atendem as condições, no caso do sexemplo, que tem uma carga maior que 40.
+ */
+
+Principais Funções de Agregação:
+COUNT: Conta o número de linhas em um conjunto de resultados.
+
+
+SELECT SUM(carga) FROM pedidos;
+/*SUM: Calcula a soma de um conjunto de valores.*/
+
+SELECT AVG(carga) FROM pedidos;
+/*AVG: Calcula a média de um conjunto de valores.*/
+
+SELECT MAX(carga) FROM pedidos;
+/*MAX: Retorna o valor máximo de um conjunto de valores.*/
+
+SELECT MIN(carga) FROM pedidos;
+/*MIN: Retorna o valor mínimo de um conjunto de valores.*/
 
 
 
