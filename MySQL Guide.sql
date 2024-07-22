@@ -186,8 +186,29 @@ where carga >35 or totaulas < 30;
 
 select * from cursos
 where nome like 'P%'; 
+
+
+
 /* usando como operador o 'Like'(Se pareça) e passando como filtro 'a%'  onde o '%' sgnifica qualquer coisa mais o dado de parametro,
  se a % for colocada no inicio ('%a') vai retornar tudo que terminar com a letra a,
  enquanto ('a%') vai retornar tudo que começar com a letra a.
 OBS: ao colocar o "Not" antes do like ele passa a se tornar operador de negação.
  */
+
+/* WILDCARD em MySQL é um caractere especial utilizado em consultas SQL para substituir um ou mais caracteres. É especialmente útil em operações de busca com a cláusula LIKE. Existem dois wildcards principais em MySQL:
+
+Porcentagem (%): Substitui zero ou mais caracteres. Por exemplo:
+ */
+SELECT * FROM produtos WHERE nome LIKE 'maçã%';
+/*Este comando seleciona todos os produtos cujo nome começa com "maçã", como "maçã", "maçã verde", "maçã vermelha", etc.
+Underline (_): Substitui exatamente um caractere. Por exemplo: */
+
+SELECT * FROM produtos WHERE nome LIKE 'maç_';
+/*Este comando seleciona todos os produtos cujo nome é "maç" seguido por exatamente um caractere, como "maçã" ou "maço".
+Wildcards são bastante úteis para realizar buscas flexíveis e encontrar registros que correspondam a padrões específicos.
+ */
+
+
+
+
+
