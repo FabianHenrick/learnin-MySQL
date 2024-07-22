@@ -238,5 +238,31 @@ SELECT MIN(carga) FROM pedidos;
 /*MIN: Retorna o valor mínimo de um conjunto de valores.*/
 
 
+/*Agrupamentos em MySQL são feitos usando a cláusula GROUP BY. A cláusula GROUP BY é usada para organizar dados em grupos com base em uma ou mais colunas.
+Isso é útil quando você deseja realizar operações de agregação, como somas, médias, contagens, etc., em grupos de dados em vez de em todos os dados.*/
 
+Select totaulas, count(*) from cursos
+group by totaulas
+order by totaulas;
+/* Ao usar o "group by", o retorno será uma grupamento de valores daqueles registros, e ao adcionar o "Count(*)" ele também vai somar quantos temos em cada agrupamento*/
 
+Uso de GROUP BY com HAVING:
+Filtrar grupos com soma de vendas superior a um valor específico:
+
+SELECT ano, count(*) from cursos 
+where totaulas >30
+group by ano
+having ano > 2013
+order by ano;
+
+/* A utilização do having torna o resultado da query semelhante utilização do where, servindo como uma filtragem para exibição do resultado, ainda podendo condicionar com o "where" o escopo do resultado,
+no caso do exemplo vamos trabalhar somente com registros cujo total de aulas sejam maiores que 30, agrupados por ano e exibindo somente dados com ano maiores que 2013, ordenando por ano*/
+
+SELECT carga, count(*) from cursos 
+where ano >2013
+group by carga
+having carga >  (select avg(carga) from cursos);
+
+/* A utilização do having seguido por uma expressão entre parenteses com outro comando sql, permite fazer uma filtragem baseadas em uma nova seleção, permitindo assim também trabalhar com resultados e médias que podem ser
+alterados a medida que o banco de dados modifica seus registro, mantendo asssim uma dinamicidade e otimização para a query
+OBS: no exemplo citado acima  o having vai exibir os valores agrupados de carga mas vai filtrar e retornar apenas os valores que forem maiores que a média de carga dos cursos*/
