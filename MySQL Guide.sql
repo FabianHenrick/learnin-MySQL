@@ -282,4 +282,26 @@ OBS: no exemplo citado acima  o having vai exibir os valores agrupados de carga 
 Uma chave estrangeira é um campo em uma tabela que se conecta a uma chave primária de outra tabela. Ela é usada para criar um vínculo entre duas tabelas e garantir que os dados permaneçam consistentes.
 
 Basicamente, uma chave estrangeira ajuda a manter a relação entre os dados em diferentes tabelas, como um link ou ponte entre elas. Por exemplo, se você tem uma tabela de pedidos e uma tabela de clientes,
- a chave estrangeira pode ser usada para associar cada pedido a um cliente específico. Isso ajuda a organizar e relacionar os dados de maneira clara e estruturada.*/
+ a chave estrangeira pode ser usada para associar cada pedido a um cliente específico. Isso ajuda a organizar e relacionar os dados de maneira clara e estruturada.*/ 
+
+alter table gafanhotos
+add foreign key (cursopreferido) 
+references cursos (idcurso);
+/* 
+esse comando cria uma ligação entre a coluna "cursopreferido" da tabela "gafanhotos" e a coluna "idcurso" da tabela "cursos". Isso ajuda a garantir que o valor em "cursopreferido" na tabela "gafanhotos" sempre exista na tabela "cursos".
+*/
+
+select gafanhotos.nome, cursos.nome, cursos.ano
+ from gafanhotos join cursos 
+ on cursos.idcurso = gafanhotos.cursopreferido;
+
+
+/*
+ O "SELECT gafanhotos.nome, cursos.nome, cursos.ano": Pega as colunas "nome" da tabela "gafanhotos", "nome" da tabela "cursos" e "ano" da tabela "cursos".
+
+enquanto o "FROM gafanhotos JOIN cursos" : Junta (une) as tabelas "gafanhotos" e "cursos".
+
+e por fim o "ON cursos.idcurso = gafanhotos.cursopreferido" : Diz que a união deve ser feita onde o "idcurso" da tabela "cursos" é igual ao "cursopreferido" da tabela "gafanhotos".
+
+No caso do exemplo acima, esse comando pega e mostra os nomes dos gafanhotos, os nomes dos cursos preferidos deles, e o ano desses cursos, unindo as duas tabelas pelo campo que conecta elas.
+*/
