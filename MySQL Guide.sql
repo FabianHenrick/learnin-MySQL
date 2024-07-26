@@ -17,6 +17,16 @@
 
  /* OBS: Não existe Ctrl+Z portanto jamais trabalhe diretamente com o banco de dados da aplicação, e sempre tenha um backup*/
 
+ /*########## ACID ##########
+
+> Atomicidade: Tudo ou nada. Ou a transação inteira acontece ou nada acontece.
+> Consistência: Assegura que o banco de dados sempre siga as regras definidas.
+> Isolamento: As transações não interferem umas nas outras enquanto estão acontecendo.
+> Durabilidade: Depois de finalizar uma transação, as mudanças feitas ficam guardadas permanentemente, mesmo que o sistema falhe.
+
+Isso ajuda a manter os dados seguros e corretos no MySQL.
+*/
+
 Create database cadastro
 default character set utf8
 default collate utf8_general_ci;
@@ -266,3 +276,10 @@ having carga >  (select avg(carga) from cursos);
 /* A utilização do having seguido por uma expressão entre parenteses com outro comando sql, permite fazer uma filtragem baseadas em uma nova seleção, permitindo assim também trabalhar com resultados e médias que podem ser
 alterados a medida que o banco de dados modifica seus registro, mantendo asssim uma dinamicidade e otimização para a query
 OBS: no exemplo citado acima  o having vai exibir os valores agrupados de carga mas vai filtrar e retornar apenas os valores que forem maiores que a média de carga dos cursos*/
+
+/*############ Chave Estrangeira #############
+
+Uma chave estrangeira é um campo em uma tabela que se conecta a uma chave primária de outra tabela. Ela é usada para criar um vínculo entre duas tabelas e garantir que os dados permaneçam consistentes.
+
+Basicamente, uma chave estrangeira ajuda a manter a relação entre os dados em diferentes tabelas, como um link ou ponte entre elas. Por exemplo, se você tem uma tabela de pedidos e uma tabela de clientes,
+ a chave estrangeira pode ser usada para associar cada pedido a um cliente específico. Isso ajuda a organizar e relacionar os dados de maneira clara e estruturada.*/
