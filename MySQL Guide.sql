@@ -305,3 +305,23 @@ e por fim o "ON cursos.idcurso = gafanhotos.cursopreferido" : Diz que a união d
 
 No caso do exemplo acima, esse comando pega e mostra os nomes dos gafanhotos, os nomes dos cursos preferidos deles, e o ano desses cursos, unindo as duas tabelas pelo campo que conecta elas.
 */
+
+select g.nome, g.nome, c.ano
+ from gafanhotos as g inner join cursos as c
+ on c.idcurso = g.cursopreferido;
+
+/*
+Inner Join é um tipo de junção utilizada em consultas SQL para combinar linhas de duas ou mais tabelas com base em uma condição de igualdade entre colunas.
+Essa operação é fundamental para a realização de consultas mais complexas e eficientes em bancos de dados relacionais.
+
+ É possivel usar o "as" para abreviar os nomes das tabelas, facilitando a escrita e otimizando seu tempo
+*/
+
+select g.nome, g.nome, c.ano
+ from gafanhotos as g left outer join cursos as c
+ on c.idcurso = g.cursopreferido;
+
+/*OUTER JOIN é usado para recuperar todos os registros das tabelas, mesmo para aqueles registros sem valor correspondente na outra tabela com base na condição de JOIN.
+Nesses casos, ele retorna NULL como o valor para as colunas ausentes.
+O "Left" nesse caso indica qual tabela tem preferencia em relação a outra, no caso a da esquerda do join seria a gafanhotos etambém bode ser trocado por "Right"
+/*
